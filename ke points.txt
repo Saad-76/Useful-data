@@ -1,0 +1,23 @@
+React Js Website deployment all points
+
+1) Open panel. Go to file manager and  paste build in html file there.
+2) Change favicon of react app  present in public file.
+3) Change name of your app  and description of your app present in index.html file.
+4) If your are deploying react app then add .htaccess file. 
+the content inside htaccess file is as follows:
+"
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
+".
+
+Using ngnix to deploy website has following procedure to access.
+1)Upload project build on git-hub.
+
+
